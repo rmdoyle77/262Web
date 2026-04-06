@@ -8,6 +8,10 @@ app.use(express.json());
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/transactions', require('./routes/transactions'));
+app.use('/api/budgets', require('./routes/budgets'));
+app.use('/api/savings', require('./routes/savings'));
+app.use('/api/recurring', require('./routes/recurring'));
+app.use('/api/dashboard', require('./routes/dashboard'));
 
 app.get('/', (req, res) => {
   res.json({ message: 'Finance Tracker API is running!' });
